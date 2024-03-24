@@ -1,0 +1,76 @@
+<div class="container">
+    <h2>E2 Transport As A Service (TaaS) => Subscription Service</h2>
+  
+    <!-- Telematics Analytics Data -->
+    <div *ngIf="telematicsAnalyticsData">
+      <h3>Fleet Info : </h3>
+      <table class="table">
+        <thead>
+          <tr>
+            <th>Fleet ID</th>
+            <th>Engine Health Metrics</th>
+            <th>Availability</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr *ngFor="let telematics of telematicsAnalyticsData.data.getAllTelematics">
+            <td>{{ telematics.telematicsId }}</td>
+            <td>{{ telematics.engineHealthMetrics }}</td>
+            <td>{{ telematics.availability }}</td>
+          </tr>
+        </tbody>
+      </table>
+    </div>
+  
+    <!-- Customers Data -->
+    <div *ngIf="customersData">
+      <h3>Customers Info :</h3>
+      <table class="table">
+        <thead>
+          <tr>
+            <th>ID</th>
+            <th>Name</th>
+            <th>Email</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr *ngFor="let customer of customersData.data.customers">
+            <td>{{ customer.id }}</td>
+            <td>{{ customer.name }}</td>
+            <td>{{ customer.email }}</td>
+          </tr>
+        </tbody>
+      </table>
+    </div>
+  
+    <!-- Booking Form -->
+    <div>
+      <h3>Subscribe Fleet</h3>
+      <form [formGroup]="bookingForm" (ngSubmit)="bookFleet()">
+        <div class="form-group">
+          <label for="fleetId">Fleet ID:</label>
+          <input type="text" id="fleetId" formControlName="fleetId" class="form-control">
+        </div>
+        <div class="form-group">
+          <label for="customerName">Customer Name:</label>
+          <input type="text" id="customerName" formControlName="customerName" class="form-control">
+        </div>
+        <div class="form-group">
+          <label for="startDate">Start Date:</label>
+          <input type="date" id="startDate" formControlName="startDate" class="form-control">
+        </div>
+        <div class="form-group">
+          <label for="endDate">End Date:</label>
+          <input type="date" id="endDate" formControlName="endDate" class="form-control">
+        </div>
+        <button type="submit" class="btn btn-primary">Subscribe Fleet</button>
+      </form>
+    </div>
+  </div>
+
+  <div *ngIf="subscriptionResponse">
+    <h3>Subscription Response</h3>
+       <p>Message: {{ subscriptionResponse}}</p>
+    <!-- Add additional fields you want to display -->
+  </div>
+  

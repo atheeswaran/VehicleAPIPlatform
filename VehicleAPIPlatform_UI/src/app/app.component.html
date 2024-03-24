@@ -1,0 +1,79 @@
+
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Four Blocks with Hyperlinks</title>
+  <style>
+    body, html {
+      margin: 0;
+      padding: 0;
+      height: 100%;
+      font-family: Arial, sans-serif;
+    }
+    footer p {
+      font-style: italic; /* Make the text italic */
+      text-align: right; /* Align the text to the right */
+      padding: 10px; /* Add padding as needed */ 
+      font-weight: bold; /* Make the text bold */   
+    }
+
+    .container {
+      text-align: center;
+      margin-top: 20px;
+    }
+
+    .block {
+      padding: 10px;
+      margin: 10px auto;
+      background-color: #f0f0f0;
+      border: 1px solid #ccc;
+      display: inline-block;
+      text-decoration: none;
+      color: black;
+    }
+
+    .block:hover {
+      opacity: 0.8;
+    }
+
+    .block1 {
+      background-color: #c5e1a5; /* Red */
+    }
+
+    .block2 {
+      background-color: #ffcc80; /* Blue */
+    }
+
+    .block3 {
+      background-color: #e1bee7; /* Green */
+    }
+
+    .block4 {
+      background-color: #80deea; /* Yellow */
+    }
+  </style>
+</head>
+<body>
+  <router-outlet></router-outlet>
+  <ng-template [ngIf]="isHomePage()">
+  <div class="container"> 
+    <h1>Vehicle API Integration Platform</h1>
+    <a routerLink="/FleetOptimization" class="block block1">E1 Customer Experience => Fleet Optimization</a>
+    <a routerLink="/SafetyAlerts" class="block block2">E1 Customer Experience => Safety Alerts</a>
+    <a routerLink="/SubscriptionService" class="block block3">E2 Transport As a Service (TaaS) => Subscription Service</a>
+    <a routerLink="/VehicleSpecs" class="block block4">E3 Customer Portal => Vehicle Specs**</a>
+    <a routerLink="/VehicleInventory" class="block block1">E4 Dealer Portal => Vehicle Inventory**</a>
+    <a routerLink="/OnlineFinancing" class="block block2">E4 Dealer Portal => Online Financing**</a>
+    <a routerLink="/CollabDesign" class="block block3">E5 3rd Party => Collab Design**</a>
+
+  </div>
+  <footer>
+    <p>E1, E2, E3 ... are referring to different entities within Vehicle Ecosystem</p>
+    <p> **Services yet to be Implemented </p>
+  </footer>
+    </ng-template>
+</body>
+</html>

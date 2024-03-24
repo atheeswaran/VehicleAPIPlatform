@@ -1,0 +1,27 @@
+<div *ngFor="let telematics of telematicsData.data.getAllTelematics">
+  <table class="telematics-table">
+    <thead>
+      <tr>
+        <th>Fleet ID</th>
+        <th>Fuel Efficiency</th>
+        <th>Average Speed</th>
+        <th>Engine Health Metrics</th>
+        <th>Action</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td>{{ telematics.telematicsId }}</td>
+        <td>{{ telematics.fuelEfficiency }}</td>
+        <td>{{ telematics.averageSpeed }}</td>
+        <td>{{ telematics.engineHealthMetrics }}</td>
+        <td>
+          <button class="alerts-button" (click)="safetyAlerts(telematics.telematicsId)">Safety Alerts</button>
+          <div *ngIf="safetyAlertsResponse[telematics.telematicsId]" class="response-message">
+            {{ safetyAlertsResponse[telematics.telematicsId] }}
+          </div>
+        </td>
+      </tr>
+    </tbody>
+  </table>
+</div>

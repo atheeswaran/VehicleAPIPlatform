@@ -1,0 +1,27 @@
+<div *ngFor="let telematics of telematicsAnalyticsData.data.getAllTelematics">
+  <table class="telematics-table">
+    <thead>
+      <tr>
+        <th>Fleet ID</th>
+        <th>Fuel Efficiency</th>
+        <th>Average Speed</th>
+        <th>Engine Health Metrics</th>
+        <th>Action</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td>{{ telematics.telematicsId }}</td>
+        <td>{{ telematics.fuelEfficiency }}</td>
+        <td>{{ telematics.averageSpeed }}</td>
+        <td>{{ telematics.engineHealthMetrics }}</td>
+        <td>
+          <button class="optimize-button" (click)="adjustRoute(telematics.telematicsId)">Optimize Fleet</button>
+          <div *ngIf="adjustRouteResponse[telematics.telematicsId]" class="response-message">
+            {{ adjustRouteResponse[telematics.telematicsId] }}
+          </div>
+        </td>
+      </tr>
+    </tbody>
+  </table>
+</div>

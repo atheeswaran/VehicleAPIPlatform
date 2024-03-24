@@ -1,0 +1,41 @@
+body, html {
+    margin: 0;
+    padding: 0;
+    height: 100%;
+  }
+  
+  .title {
+    text-align: center;
+    margin-top: 20px;
+  }
+  
+  .block {
+    width: 50%;
+    height: 50%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+  
+  .block a {
+    text-decoration: none;
+    color: black;
+  }
+  
+  /* Style for each quadrant */
+  .top-left {
+    background-color: #f0f0f0;
+  }
+  
+  .top-right {
+    background-color: #e0e0e0;
+  }
+  
+  .bottom-left {
+    background-color: #d0d0d0;
+  }
+  
+  .bottom-right {
+    background-color: #c0c0c0;
+  }
+  

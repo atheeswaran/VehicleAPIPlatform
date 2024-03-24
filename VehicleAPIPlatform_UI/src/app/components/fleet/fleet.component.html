@@ -1,0 +1,15 @@
+<!-- fleet.component.html -->
+<div>
+    <h2>Fleet Overview</h2>
+    <div *ngIf="fleetOverview">
+      <!--pre>{{ fleetOverview | json }}</pre-->
+      <p>Fleet ID: {{  fleetOverview.data.getFleetOverview.fleetId }}</p>
+      <p>Total Vehicles: {{  fleetOverview.data.getFleetOverview.totalVehicles }}</p>
+      <p>Total Mileage: {{  fleetOverview.data.getFleetOverview.totalMileage }}</p>
+      <p>Average Fuel Efficiency: {{  fleetOverview.data.getFleetOverview.averageFuelEfficiency }}</p>
+    </div>
+    <div *ngIf="!fleetOverview">
+      <p>Loading fleet information...</p>
+    </div>
+  </div>
+  

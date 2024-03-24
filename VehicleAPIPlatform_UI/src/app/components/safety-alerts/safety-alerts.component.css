@@ -1,0 +1,52 @@
+.telematics-container {
+    display: flex;
+    flex-direction: column;
+  }
+
+  /* Title style */
+  .fleet-title {
+    font-size: 24px;
+    margin-bottom: 10px;
+    color: #ffcc80;
+  }
+  
+  .telematics-table {
+    width: 100%;
+    border: 1px solid #ddd; /* Add border around the table */
+    border-collapse: collapse;
+  }
+  
+  .telematics-table th, .telematics-table td {
+    border: 1px solid #ddd; /* Add border to table cells */
+    padding: 8px;
+  }
+  
+  .telematics-table th {
+    background-color: #ffcc80;
+  }
+
+  .response-message {
+    background-color: #ffcc80; /* Light gray background */
+    color: #333333; /* Dark text color */
+    padding: 5px 10px; /* Add padding for better spacing */
+    border-radius: 5px; /* Add rounded corners */
+    margin-top: 5px; /* Add some margin to separate from the button */
+  }
+  
+  
+  .alerts-button {
+    padding: 8px 16px;
+    background-color: #ffcc80;
+    color: white;
+    border: none;
+    cursor: pointer;
+  }
+  
+  .alerts-button:hover {
+    background-color: #ffcc80;
+  }
+  
+  .loading-message, .no-data-message {
+    margin-top: 20px;
+  }
+  

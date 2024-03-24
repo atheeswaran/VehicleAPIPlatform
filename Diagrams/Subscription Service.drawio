@@ -1,0 +1,93 @@
+<mxfile host="app.diagrams.net" modified="2024-03-21T06:24:05.970Z" agent="Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/122.0.0.0 Safari/537.36 Edg/122.0.0.0" etag="2fAazB-CcOKn-9YLIYwm" version="24.0.7" type="github">
+  <diagram name="Page-1" id="QUUZMIHogQgfO9D1SSY1">
+    <mxGraphModel dx="2092" dy="588" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="850" pageHeight="1100" math="0" shadow="0">
+      <root>
+        <mxCell id="0" />
+        <mxCell id="1" parent="0" />
+        <mxCell id="bnjpEcjlknt-yDMa8jp4-1" value="Customers" style="shape=umlActor;verticalLabelPosition=bottom;verticalAlign=top;html=1;outlineConnect=0;" parent="1" vertex="1">
+          <mxGeometry x="-26" y="235" width="30" height="60" as="geometry" />
+        </mxCell>
+        <mxCell id="bnjpEcjlknt-yDMa8jp4-2" value="&lt;b&gt;Angular Frontend&amp;nbsp; (E2: Transport As A Service =&amp;gt; Subscription Service)&lt;/b&gt;" style="whiteSpace=wrap;html=1;aspect=fixed;fillColor=#d5e8d4;strokeColor=#82b366;" parent="1" vertex="1">
+          <mxGeometry x="64" y="215" width="130" height="130" as="geometry" />
+        </mxCell>
+        <mxCell id="bnjpEcjlknt-yDMa8jp4-3" value="" style="endArrow=classic;html=1;rounded=0;exitX=0.5;exitY=0.5;exitDx=0;exitDy=0;exitPerimeter=0;entryX=0.006;entryY=0.383;entryDx=0;entryDy=0;entryPerimeter=0;" parent="1" source="bnjpEcjlknt-yDMa8jp4-1" target="bnjpEcjlknt-yDMa8jp4-2" edge="1">
+          <mxGeometry width="50" height="50" relative="1" as="geometry">
+            <mxPoint x="224" y="325" as="sourcePoint" />
+            <mxPoint x="274" y="275" as="targetPoint" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="bnjpEcjlknt-yDMa8jp4-4" value="" style="endArrow=classic;html=1;rounded=0;exitX=1;exitY=0.5;exitDx=0;exitDy=0;" parent="1" source="bnjpEcjlknt-yDMa8jp4-2" edge="1">
+          <mxGeometry width="50" height="50" relative="1" as="geometry">
+            <mxPoint x="224" y="325" as="sourcePoint" />
+            <mxPoint x="304" y="215" as="targetPoint" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="bnjpEcjlknt-yDMa8jp4-5" value="&lt;b&gt;Retrieve and Display available Fleets with Vehicle info&lt;/b&gt;" style="ellipse;whiteSpace=wrap;html=1;aspect=fixed;fillColor=#f8cecc;strokeColor=#b85450;" parent="1" vertex="1">
+          <mxGeometry x="304" y="155" width="110" height="110" as="geometry" />
+        </mxCell>
+        <mxCell id="bnjpEcjlknt-yDMa8jp4-6" value="" style="endArrow=classic;html=1;rounded=0;exitX=1;exitY=0.5;exitDx=0;exitDy=0;entryX=0;entryY=0.5;entryDx=0;entryDy=0;" parent="1" target="bnjpEcjlknt-yDMa8jp4-7" edge="1">
+          <mxGeometry width="50" height="50" relative="1" as="geometry">
+            <mxPoint x="120" y="345" as="sourcePoint" />
+            <mxPoint x="230" y="420" as="targetPoint" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="bnjpEcjlknt-yDMa8jp4-7" value="&lt;b&gt;&quot;Create Subscription&quot; with Fleet details selected&lt;/b&gt;" style="ellipse;whiteSpace=wrap;html=1;aspect=fixed;fillColor=#f8cecc;strokeColor=#b85450;" parent="1" vertex="1">
+          <mxGeometry x="304" y="450" width="134" height="134" as="geometry" />
+        </mxCell>
+        <mxCell id="bnjpEcjlknt-yDMa8jp4-8" value="" style="endArrow=classic;html=1;rounded=0;exitX=1;exitY=0.5;exitDx=0;exitDy=0;" parent="1" source="bnjpEcjlknt-yDMa8jp4-7" edge="1">
+          <mxGeometry width="50" height="50" relative="1" as="geometry">
+            <mxPoint x="444" y="564" as="sourcePoint" />
+            <mxPoint x="520" y="519" as="targetPoint" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="bnjpEcjlknt-yDMa8jp4-12" value="" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;" parent="1" source="bnjpEcjlknt-yDMa8jp4-13" target="bnjpEcjlknt-yDMa8jp4-24" edge="1">
+          <mxGeometry relative="1" as="geometry">
+            <mxPoint x="534" y="744" as="targetPoint" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="bnjpEcjlknt-yDMa8jp4-13" value="&lt;b&gt;Call Create Subscription API&lt;/b&gt;" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#e1d5e7;strokeColor=#9673a6;" parent="1" vertex="1">
+          <mxGeometry x="520" y="489" width="120" height="60" as="geometry" />
+        </mxCell>
+        <mxCell id="bnjpEcjlknt-yDMa8jp4-18" value="" style="ellipse;html=1;shape=endState;fillColor=#000000;strokeColor=#ff0000;" parent="1" vertex="1">
+          <mxGeometry x="565" y="779" width="30" height="30" as="geometry" />
+        </mxCell>
+        <mxCell id="bnjpEcjlknt-yDMa8jp4-20" value="&lt;b&gt;&lt;u&gt;MICROSERVICE1&amp;nbsp;&lt;/u&gt;&lt;/b&gt;&lt;div&gt;&lt;b&gt;&lt;u&gt;Fleet Overview&lt;/u&gt;&lt;/b&gt;&lt;/div&gt;" style="text;html=1;strokeColor=#d6b656;fillColor=#fff2cc;align=center;verticalAlign=middle;whiteSpace=wrap;rounded=0;" parent="1" vertex="1">
+          <mxGeometry x="460" y="165" width="141.5" height="40" as="geometry" />
+        </mxCell>
+        <mxCell id="bnjpEcjlknt-yDMa8jp4-21" value="&lt;b&gt;&lt;u&gt;MICROSERVICE 3 Subscription Service&lt;/u&gt;&lt;/b&gt;" style="text;html=1;strokeColor=#d6b656;fillColor=#fff2cc;align=center;verticalAlign=middle;whiteSpace=wrap;rounded=0;" parent="1" vertex="1">
+          <mxGeometry x="670" y="484" width="121.5" height="40" as="geometry" />
+        </mxCell>
+        <mxCell id="bnjpEcjlknt-yDMa8jp4-22" value="&lt;b&gt;&lt;u&gt;API1&amp;nbsp;&amp;nbsp;&lt;/u&gt;&lt;/b&gt;&lt;div&gt;&lt;b&gt;&lt;u&gt;GetAllFleetInfo&lt;/u&gt;&lt;/b&gt;&lt;/div&gt;" style="text;html=1;strokeColor=#d6b656;fillColor=#fff2cc;align=center;verticalAlign=middle;whiteSpace=wrap;rounded=0;" parent="1" vertex="1">
+          <mxGeometry x="460" y="215" width="141.5" height="40" as="geometry" />
+        </mxCell>
+        <mxCell id="bnjpEcjlknt-yDMa8jp4-23" value="&lt;b&gt;&lt;u&gt;API 3&lt;/u&gt;&lt;/b&gt;&lt;div&gt;&lt;b&gt;&lt;u&gt;Create Subscription&lt;/u&gt;&lt;/b&gt;&lt;/div&gt;" style="text;html=1;strokeColor=#d6b656;fillColor=#fff2cc;align=center;verticalAlign=middle;whiteSpace=wrap;rounded=0;" parent="1" vertex="1">
+          <mxGeometry x="670" y="544" width="121.5" height="40" as="geometry" />
+        </mxCell>
+        <mxCell id="pudLjY0xGoM-pLV7_xxN-1" value="" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;" parent="1" source="bnjpEcjlknt-yDMa8jp4-24" target="bnjpEcjlknt-yDMa8jp4-18" edge="1">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="bnjpEcjlknt-yDMa8jp4-24" value="&lt;span style=&quot;font-weight: 700;&quot;&gt;Notification Message to Customer (&lt;/span&gt;&lt;font face=&quot;Consolas, Courier New, monospace&quot; color=&quot;#a31515&quot;&gt;&lt;span style=&quot;font-size: 14px; white-space: pre; background-color: rgb(255, 255, 255);&quot;&gt;Subscription &lt;/span&gt;&lt;/font&gt;&lt;div&gt;&lt;font face=&quot;Consolas, Courier New, monospace&quot; color=&quot;#a31515&quot;&gt;&lt;span style=&quot;font-size: 14px; white-space: pre; background-color: rgb(255, 255, 255);&quot;&gt;Created/failed &lt;/span&gt;&lt;/font&gt;&lt;div&gt;&lt;font face=&quot;Consolas, Courier New, monospace&quot; color=&quot;#a31515&quot;&gt;&lt;span style=&quot;font-size: 14px; white-space: pre; background-color: rgb(255, 255, 255);&quot;&gt;with Fleet ID, &lt;/span&gt;&lt;/font&gt;&lt;/div&gt;&lt;div&gt;&lt;font face=&quot;Consolas, Courier New, monospace&quot; color=&quot;#a31515&quot;&gt;&lt;span style=&quot;font-size: 14px; white-space: pre; background-color: rgb(255, 255, 255);&quot;&gt;Start date and &lt;/span&gt;&lt;/font&gt;&lt;/div&gt;&lt;div&gt;&lt;font face=&quot;Consolas, Courier New, monospace&quot; color=&quot;#a31515&quot;&gt;&lt;span style=&quot;font-size: 14px; white-space: pre; background-color: rgb(255, 255, 255);&quot;&gt;End date&lt;/span&gt;&lt;/font&gt;&lt;span style=&quot;background-color: initial; font-weight: 700;&quot;&gt;)&lt;/span&gt;&lt;/div&gt;&lt;/div&gt;" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#e1d5e7;strokeColor=#9673a6;" parent="1" vertex="1">
+          <mxGeometry x="500" y="614" width="155" height="125" as="geometry" />
+        </mxCell>
+        <mxCell id="bnjpEcjlknt-yDMa8jp4-25" value="&lt;b&gt;Reuse API2 via Event Broker - Apache Kafka From E4: Dealer Portal&lt;/b&gt;" style="text;html=1;strokeColor=#C73500;fillColor=#fa6800;align=center;verticalAlign=middle;whiteSpace=wrap;rounded=0;fontColor=#000000;" parent="1" vertex="1">
+          <mxGeometry x="650" y="330" width="155.25" height="60" as="geometry" />
+        </mxCell>
+        <mxCell id="bnjpEcjlknt-yDMa8jp4-26" value="" style="endArrow=classic;html=1;rounded=0;" parent="1" edge="1">
+          <mxGeometry width="50" height="50" relative="1" as="geometry">
+            <mxPoint x="200" y="280" as="sourcePoint" />
+            <mxPoint x="320" y="360" as="targetPoint" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="bnjpEcjlknt-yDMa8jp4-27" value="&lt;b&gt;Retrieve and Display list of Customers&lt;/b&gt;" style="ellipse;whiteSpace=wrap;html=1;aspect=fixed;fillColor=#f8cecc;strokeColor=#b85450;" parent="1" vertex="1">
+          <mxGeometry x="315.5" y="310" width="120" height="120" as="geometry" />
+        </mxCell>
+        <mxCell id="bnjpEcjlknt-yDMa8jp4-28" value="&lt;b&gt;&lt;u&gt;MICROSERVICE2&amp;nbsp;&lt;/u&gt;&lt;/b&gt;&lt;div&gt;&lt;b&gt;&lt;u&gt;Customers&lt;/u&gt;&lt;/b&gt;&lt;/div&gt;" style="text;html=1;strokeColor=#d6b656;fillColor=#fff2cc;align=center;verticalAlign=middle;whiteSpace=wrap;rounded=0;" parent="1" vertex="1">
+          <mxGeometry x="470" y="320" width="141.5" height="40" as="geometry" />
+        </mxCell>
+        <mxCell id="bnjpEcjlknt-yDMa8jp4-29" value="&lt;b&gt;&lt;u&gt;API2&amp;nbsp;&amp;nbsp;&lt;/u&gt;&lt;/b&gt;&lt;div&gt;&lt;b&gt;&lt;u&gt;GetAllCustomers&lt;/u&gt;&lt;/b&gt;&lt;/div&gt;" style="text;html=1;strokeColor=#d6b656;fillColor=#fff2cc;align=center;verticalAlign=middle;whiteSpace=wrap;rounded=0;" parent="1" vertex="1">
+          <mxGeometry x="470" y="370" width="141.5" height="40" as="geometry" />
+        </mxCell>
+      </root>
+    </mxGraphModel>
+  </diagram>
+</mxfile>

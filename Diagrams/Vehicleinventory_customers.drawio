@@ -1,0 +1,55 @@
+<mxfile host="app.diagrams.net" modified="2024-03-21T06:35:04.797Z" agent="Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/122.0.0.0 Safari/537.36 Edg/122.0.0.0" etag="2yfQNrILc4WMRX3KmZ2_" version="24.0.7" type="github">
+  <diagram name="Page-1" id="gjM-m6G8FT53Hx5peR2M">
+    <mxGraphModel dx="2092" dy="588" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="850" pageHeight="1100" math="0" shadow="0">
+      <root>
+        <mxCell id="0" />
+        <mxCell id="1" parent="0" />
+        <mxCell id="ZkRnhOO5NQQZ5rp0yk6N-2" value="Customers" style="shape=umlActor;verticalLabelPosition=bottom;verticalAlign=top;html=1;outlineConnect=0;" vertex="1" parent="1">
+          <mxGeometry x="-26" y="235" width="30" height="60" as="geometry" />
+        </mxCell>
+        <mxCell id="ZkRnhOO5NQQZ5rp0yk6N-3" value="&lt;b&gt;Angular Frontend&amp;nbsp; (E4: Dealer Portal =&amp;gt; Vehicle Inventory and Customers Service)&lt;/b&gt;" style="whiteSpace=wrap;html=1;aspect=fixed;fillColor=#d5e8d4;strokeColor=#82b366;" vertex="1" parent="1">
+          <mxGeometry x="64" y="215" width="130" height="130" as="geometry" />
+        </mxCell>
+        <mxCell id="ZkRnhOO5NQQZ5rp0yk6N-4" value="" style="endArrow=classic;html=1;rounded=0;exitX=0.5;exitY=0.5;exitDx=0;exitDy=0;exitPerimeter=0;entryX=0.006;entryY=0.383;entryDx=0;entryDy=0;entryPerimeter=0;" edge="1" parent="1" source="ZkRnhOO5NQQZ5rp0yk6N-2" target="ZkRnhOO5NQQZ5rp0yk6N-3">
+          <mxGeometry width="50" height="50" relative="1" as="geometry">
+            <mxPoint x="224" y="325" as="sourcePoint" />
+            <mxPoint x="274" y="275" as="targetPoint" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="ZkRnhOO5NQQZ5rp0yk6N-5" value="" style="endArrow=classic;html=1;rounded=0;exitX=1;exitY=0.5;exitDx=0;exitDy=0;" edge="1" parent="1" source="ZkRnhOO5NQQZ5rp0yk6N-3">
+          <mxGeometry width="50" height="50" relative="1" as="geometry">
+            <mxPoint x="224" y="325" as="sourcePoint" />
+            <mxPoint x="304" y="215" as="targetPoint" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="ZkRnhOO5NQQZ5rp0yk6N-6" value="&lt;b&gt;Retrieve and Display list of available Vehicle inventories&lt;/b&gt;" style="ellipse;whiteSpace=wrap;html=1;aspect=fixed;fillColor=#f8cecc;strokeColor=#b85450;" vertex="1" parent="1">
+          <mxGeometry x="304" y="155" width="110" height="110" as="geometry" />
+        </mxCell>
+        <mxCell id="ZkRnhOO5NQQZ5rp0yk6N-7" value="&lt;b&gt;&lt;u&gt;MICROSERVICE1&amp;nbsp;&lt;/u&gt;&lt;/b&gt;&lt;div&gt;&lt;b&gt;&lt;u&gt;Vehicle Inventory&lt;/u&gt;&lt;/b&gt;&lt;/div&gt;" style="text;html=1;strokeColor=#d6b656;fillColor=#fff2cc;align=center;verticalAlign=middle;whiteSpace=wrap;rounded=0;" vertex="1" parent="1">
+          <mxGeometry x="460" y="165" width="141.5" height="40" as="geometry" />
+        </mxCell>
+        <mxCell id="ZkRnhOO5NQQZ5rp0yk6N-8" value="&lt;b&gt;&lt;u&gt;API1&amp;nbsp;&amp;nbsp;&lt;/u&gt;&lt;/b&gt;&lt;div&gt;&lt;b&gt;&lt;u&gt;GetAllVehicleInventories&lt;/u&gt;&lt;/b&gt;&lt;/div&gt;" style="text;html=1;strokeColor=#d6b656;fillColor=#fff2cc;align=center;verticalAlign=middle;whiteSpace=wrap;rounded=0;" vertex="1" parent="1">
+          <mxGeometry x="460" y="215" width="140" height="55" as="geometry" />
+        </mxCell>
+        <mxCell id="ZkRnhOO5NQQZ5rp0yk6N-9" value="&lt;b&gt;This API2 will be reused via Event Broker - Apache Kafka in&amp;nbsp; E2: TaaS - Subscription Service&lt;/b&gt;" style="text;html=1;strokeColor=#C73500;fillColor=#fa6800;align=center;verticalAlign=middle;whiteSpace=wrap;rounded=0;fontColor=#000000;" vertex="1" parent="1">
+          <mxGeometry x="650" y="330" width="155.25" height="60" as="geometry" />
+        </mxCell>
+        <mxCell id="ZkRnhOO5NQQZ5rp0yk6N-10" value="" style="endArrow=classic;html=1;rounded=0;" edge="1" parent="1">
+          <mxGeometry width="50" height="50" relative="1" as="geometry">
+            <mxPoint x="200" y="280" as="sourcePoint" />
+            <mxPoint x="320" y="360" as="targetPoint" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="ZkRnhOO5NQQZ5rp0yk6N-11" value="&lt;b&gt;Retrieve and Display list of Customers&lt;/b&gt;" style="ellipse;whiteSpace=wrap;html=1;aspect=fixed;fillColor=#f8cecc;strokeColor=#b85450;" vertex="1" parent="1">
+          <mxGeometry x="315.5" y="310" width="120" height="120" as="geometry" />
+        </mxCell>
+        <mxCell id="ZkRnhOO5NQQZ5rp0yk6N-12" value="&lt;b&gt;&lt;u&gt;MICROSERVICE2&amp;nbsp;&lt;/u&gt;&lt;/b&gt;&lt;div&gt;&lt;b&gt;&lt;u&gt;Customers&lt;/u&gt;&lt;/b&gt;&lt;/div&gt;" style="text;html=1;strokeColor=#d6b656;fillColor=#fff2cc;align=center;verticalAlign=middle;whiteSpace=wrap;rounded=0;" vertex="1" parent="1">
+          <mxGeometry x="470" y="320" width="141.5" height="40" as="geometry" />
+        </mxCell>
+        <mxCell id="ZkRnhOO5NQQZ5rp0yk6N-13" value="&lt;b&gt;&lt;u&gt;API2&amp;nbsp;&amp;nbsp;&lt;/u&gt;&lt;/b&gt;&lt;div&gt;&lt;b&gt;&lt;u&gt;GetAllCustomers&lt;/u&gt;&lt;/b&gt;&lt;/div&gt;" style="text;html=1;strokeColor=#d6b656;fillColor=#fff2cc;align=center;verticalAlign=middle;whiteSpace=wrap;rounded=0;" vertex="1" parent="1">
+          <mxGeometry x="470" y="370" width="141.5" height="40" as="geometry" />
+        </mxCell>
+      </root>
+    </mxGraphModel>
+  </diagram>
+</mxfile>

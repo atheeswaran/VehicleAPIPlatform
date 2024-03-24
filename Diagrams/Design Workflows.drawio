@@ -1,0 +1,104 @@
+<mxfile host="app.diagrams.net" modified="2024-03-21T05:55:05.340Z" agent="Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/122.0.0.0 Safari/537.36 Edg/122.0.0.0" etag="Y_wqn-fBaH-o_ByS3T1I" version="24.0.7" type="github">
+  <diagram name="Page-1" id="PpiKkiDvaP0agM-0ErOj">
+    <mxGraphModel dx="2171" dy="588" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="850" pageHeight="1100" math="0" shadow="0">
+      <root>
+        <mxCell id="0" />
+        <mxCell id="1" parent="0" />
+        <mxCell id="7Mi9UlGByk3WwvWGCCkA-1" value="Customers" style="shape=umlActor;verticalLabelPosition=bottom;verticalAlign=top;html=1;outlineConnect=0;" parent="1" vertex="1">
+          <mxGeometry x="-26" y="140" width="30" height="60" as="geometry" />
+        </mxCell>
+        <mxCell id="7Mi9UlGByk3WwvWGCCkA-2" value="&lt;b&gt;Angular Frontend&amp;nbsp; (E1: Customer Experience =&amp;gt; Fleet Optimization)&lt;/b&gt;" style="whiteSpace=wrap;html=1;aspect=fixed;fillColor=#d5e8d4;strokeColor=#82b366;" parent="1" vertex="1">
+          <mxGeometry x="64" y="120" width="130" height="130" as="geometry" />
+        </mxCell>
+        <mxCell id="7Mi9UlGByk3WwvWGCCkA-3" value="" style="endArrow=classic;html=1;rounded=0;exitX=0.5;exitY=0.5;exitDx=0;exitDy=0;exitPerimeter=0;entryX=0.006;entryY=0.383;entryDx=0;entryDy=0;entryPerimeter=0;" parent="1" source="7Mi9UlGByk3WwvWGCCkA-1" target="7Mi9UlGByk3WwvWGCCkA-2" edge="1">
+          <mxGeometry width="50" height="50" relative="1" as="geometry">
+            <mxPoint x="224" y="230" as="sourcePoint" />
+            <mxPoint x="274" y="180" as="targetPoint" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="7Mi9UlGByk3WwvWGCCkA-4" value="" style="endArrow=classic;html=1;rounded=0;exitX=1;exitY=0.5;exitDx=0;exitDy=0;" parent="1" source="7Mi9UlGByk3WwvWGCCkA-2" edge="1">
+          <mxGeometry width="50" height="50" relative="1" as="geometry">
+            <mxPoint x="224" y="230" as="sourcePoint" />
+            <mxPoint x="304" y="120" as="targetPoint" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="7Mi9UlGByk3WwvWGCCkA-5" value="&lt;b&gt;Retrieve and Display available Fleets with Telematics Data&lt;/b&gt;" style="ellipse;whiteSpace=wrap;html=1;aspect=fixed;fillColor=#f8cecc;strokeColor=#b85450;" parent="1" vertex="1">
+          <mxGeometry x="304" y="60" width="110" height="110" as="geometry" />
+        </mxCell>
+        <mxCell id="7Mi9UlGByk3WwvWGCCkA-6" value="" style="endArrow=classic;html=1;rounded=0;exitX=1;exitY=0.5;exitDx=0;exitDy=0;" parent="1" source="7Mi9UlGByk3WwvWGCCkA-2" edge="1">
+          <mxGeometry width="50" height="50" relative="1" as="geometry">
+            <mxPoint x="224" y="230" as="sourcePoint" />
+            <mxPoint x="304" y="260" as="targetPoint" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="7Mi9UlGByk3WwvWGCCkA-7" value="&lt;b&gt;&amp;nbsp; &quot;Optimize Fleet&quot; Button for selecetd Fleet&lt;/b&gt;" style="ellipse;whiteSpace=wrap;html=1;aspect=fixed;fillColor=#f8cecc;strokeColor=#b85450;" parent="1" vertex="1">
+          <mxGeometry x="304" y="200" width="130" height="130" as="geometry" />
+        </mxCell>
+        <mxCell id="7Mi9UlGByk3WwvWGCCkA-8" value="" style="endArrow=classic;html=1;rounded=0;exitX=1;exitY=0.5;exitDx=0;exitDy=0;entryX=0;entryY=0.5;entryDx=0;entryDy=0;" parent="1" source="7Mi9UlGByk3WwvWGCCkA-7" target="7Mi9UlGByk3WwvWGCCkA-11" edge="1">
+          <mxGeometry width="50" height="50" relative="1" as="geometry">
+            <mxPoint x="444" y="310" as="sourcePoint" />
+            <mxPoint x="494" y="265" as="targetPoint" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="7Mi9UlGByk3WwvWGCCkA-9" value="" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;entryX=0.577;entryY=-0.065;entryDx=0;entryDy=0;entryPerimeter=0;" parent="1" source="7Mi9UlGByk3WwvWGCCkA-11" target="7Mi9UlGByk3WwvWGCCkA-13" edge="1">
+          <mxGeometry relative="1" as="geometry">
+            <mxPoint x="539" y="392.5" as="targetPoint" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="7Mi9UlGByk3WwvWGCCkA-10" value="" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;" parent="1" source="7Mi9UlGByk3WwvWGCCkA-11" edge="1">
+          <mxGeometry relative="1" as="geometry">
+            <mxPoint x="664" y="265" as="targetPoint" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="7Mi9UlGByk3WwvWGCCkA-11" value="&lt;div style=&quot;background-color: rgb(255, 255, 255); font-family: Consolas, &amp;quot;Courier New&amp;quot;, monospace; font-size: 14px; line-height: 19px; white-space: pre;&quot;&gt;&lt;b&gt;vehicleTelematics.&lt;/b&gt;&lt;/div&gt;&lt;div style=&quot;background-color: rgb(255, 255, 255); font-family: Consolas, &amp;quot;Courier New&amp;quot;, monospace; font-size: 14px; line-height: 19px; white-space: pre;&quot;&gt;&lt;b&gt;fuelEfficiency &amp;lt; &lt;span style=&quot;color: #098658;&quot;&gt;20&lt;/span&gt;&lt;/b&gt;&lt;/div&gt;" style="rhombus;whiteSpace=wrap;html=1;fillColor=#dae8fc;strokeColor=#6c8ebf;" parent="1" vertex="1">
+          <mxGeometry x="455" y="210" width="180" height="102.5" as="geometry" />
+        </mxCell>
+        <mxCell id="7Mi9UlGByk3WwvWGCCkA-12" value="" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;" parent="1" source="7Mi9UlGByk3WwvWGCCkA-13" edge="1">
+          <mxGeometry relative="1" as="geometry">
+            <mxPoint x="534" y="490" as="targetPoint" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="7Mi9UlGByk3WwvWGCCkA-13" value="&lt;b&gt;Optimize route for the selected Fleet&lt;/b&gt;" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#e1d5e7;strokeColor=#9673a6;" parent="1" vertex="1">
+          <mxGeometry x="474" y="390" width="120" height="60" as="geometry" />
+        </mxCell>
+        <mxCell id="7Mi9UlGByk3WwvWGCCkA-14" value="&lt;b&gt;YES&lt;/b&gt;" style="text;html=1;strokeColor=#005700;fillColor=#008a00;align=center;verticalAlign=middle;whiteSpace=wrap;rounded=0;fontColor=#ffffff;" parent="1" vertex="1">
+          <mxGeometry x="545" y="312.5" width="60" height="30" as="geometry" />
+        </mxCell>
+        <mxCell id="7Mi9UlGByk3WwvWGCCkA-15" value="&lt;b&gt;NO&lt;/b&gt;" style="text;html=1;strokeColor=#B20000;fillColor=#e51400;align=center;verticalAlign=middle;whiteSpace=wrap;rounded=0;fontColor=#ffffff;" parent="1" vertex="1">
+          <mxGeometry x="615" y="220" width="60" height="30" as="geometry" />
+        </mxCell>
+        <mxCell id="7Mi9UlGByk3WwvWGCCkA-16" value="&lt;b&gt;Notification Message to Customer =&amp;gt; &quot;Route is already Optimized! NO Action is needed&quot;&lt;/b&gt;" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#e1d5e7;strokeColor=#9673a6;" parent="1" vertex="1">
+          <mxGeometry x="665" y="240" width="110" height="100" as="geometry" />
+        </mxCell>
+        <mxCell id="7Mi9UlGByk3WwvWGCCkA-17" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;entryX=0.5;entryY=0;entryDx=0;entryDy=0;exitX=0.5;exitY=1;exitDx=0;exitDy=0;" parent="1" source="7Mi9UlGByk3WwvWGCCkA-16" target="7Mi9UlGByk3WwvWGCCkA-18" edge="1">
+          <mxGeometry relative="1" as="geometry">
+            <mxPoint x="720" y="352.5" as="sourcePoint" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="7Mi9UlGByk3WwvWGCCkA-18" value="" style="ellipse;html=1;shape=endState;fillColor=#000000;strokeColor=#ff0000;" parent="1" vertex="1">
+          <mxGeometry x="705" y="525" width="30" height="30" as="geometry" />
+        </mxCell>
+        <mxCell id="7Mi9UlGByk3WwvWGCCkA-19" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;exitX=1;exitY=0.5;exitDx=0;exitDy=0;entryX=0;entryY=0.5;entryDx=0;entryDy=0;" parent="1" target="7Mi9UlGByk3WwvWGCCkA-18" edge="1">
+          <mxGeometry relative="1" as="geometry">
+            <mxPoint x="584.5" y="540" as="sourcePoint" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="7Mi9UlGByk3WwvWGCCkA-21" value="&lt;b&gt;&lt;u&gt;MICROSERVICE1&amp;nbsp;&amp;nbsp;&lt;/u&gt;&lt;/b&gt;&lt;div&gt;&lt;b&gt;&lt;u&gt;Telematics Analytics&lt;/u&gt;&lt;/b&gt;&lt;/div&gt;" style="text;html=1;strokeColor=#d6b656;fillColor=#fff2cc;align=center;verticalAlign=middle;whiteSpace=wrap;rounded=0;" parent="1" vertex="1">
+          <mxGeometry x="423.5" y="70" width="141.5" height="40" as="geometry" />
+        </mxCell>
+        <mxCell id="7Mi9UlGByk3WwvWGCCkA-22" value="&lt;b&gt;&lt;u&gt;MICROSERVICE 2&amp;nbsp; Fleet Optimization&lt;/u&gt;&lt;/b&gt;" style="text;html=1;strokeColor=#d6b656;fillColor=#fff2cc;align=center;verticalAlign=middle;whiteSpace=wrap;rounded=0;" parent="1" vertex="1">
+          <mxGeometry x="194" y="342.5" width="121.5" height="40" as="geometry" />
+        </mxCell>
+        <mxCell id="7Mi9UlGByk3WwvWGCCkA-25" value="&lt;b&gt;&lt;u&gt;API1&amp;nbsp;&amp;nbsp;&lt;/u&gt;&lt;/b&gt;&lt;div&gt;&lt;b&gt;&lt;u&gt;GetAllTelematicsData&lt;/u&gt;&lt;/b&gt;&lt;/div&gt;" style="text;html=1;strokeColor=#d6b656;fillColor=#fff2cc;align=center;verticalAlign=middle;whiteSpace=wrap;rounded=0;" parent="1" vertex="1">
+          <mxGeometry x="423.5" y="120" width="141.5" height="40" as="geometry" />
+        </mxCell>
+        <mxCell id="7Mi9UlGByk3WwvWGCCkA-26" value="&lt;b&gt;&lt;u&gt;API 2&lt;/u&gt;&lt;/b&gt;&lt;div&gt;&lt;b&gt;&lt;u&gt;Optimize Fleet&lt;/u&gt;&lt;/b&gt;&lt;/div&gt;" style="text;html=1;strokeColor=#d6b656;fillColor=#fff2cc;align=center;verticalAlign=middle;whiteSpace=wrap;rounded=0;" parent="1" vertex="1">
+          <mxGeometry x="312.5" y="342.5" width="121.5" height="40" as="geometry" />
+        </mxCell>
+        <mxCell id="9eHTA_o7kpxBtGIH_0cv-1" value="&lt;span style=&quot;font-weight: 700;&quot;&gt;Notification Message to Customer (Route is Adjusted for selected Fleet)&lt;/span&gt;" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#e1d5e7;strokeColor=#9673a6;" parent="1" vertex="1">
+          <mxGeometry x="455" y="490" width="130" height="82.5" as="geometry" />
+        </mxCell>
+      </root>
+    </mxGraphModel>
+  </diagram>
+</mxfile>

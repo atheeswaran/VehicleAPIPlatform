@@ -1,0 +1,21 @@
+{
+  "name": "fleet-overview-service",
+  "version": "1.0.0",
+  "main": "app.js",
+  "dependencies": {
+    "apollo-server": "^3.13.0",
+    "apollo-server-express": "^2.26.2",
+    "express": "^4.18.2",
+    "graphql": "^15.8.0",
+    "mongodb": "^4.0.3",
+    "mongoose": "^8.2.0"
+  },
+  "scripts": {
+    "start": "node app.js"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "devDependencies": {},
+  "description": ""
+}

@@ -1,13 +1,13 @@
-<mxfile host="app.diagrams.net" modified="2024-04-21T11:05:31.930Z" agent="Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/123.0.0.0 Safari/537.36 Edg/123.0.0.0" etag="sUPbLxalSII9PRO7fHm-" version="24.1.0" type="github">
+<mxfile host="app.diagrams.net" modified="2024-04-21T11:05:45.675Z" agent="Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/123.0.0.0 Safari/537.36 Edg/123.0.0.0" etag="P1soPULVX7xlx7y3WomO" version="24.1.0" type="github">
   <diagram name="Page-1" id="lq2E3iUTwcxpcJMJKccM">
     <mxGraphModel dx="1429" dy="679" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="850" pageHeight="1100" math="0" shadow="0">
       <root>
         <mxCell id="0" />
         <mxCell id="1" parent="0" />
-        <mxCell id="_Vlkt0tSZf_k8hfW9mjZ-1" value="API Gateway (GraphQL)" style="rounded=1;whiteSpace=wrap;html=1;" vertex="1" parent="1">
+        <mxCell id="_Vlkt0tSZf_k8hfW9mjZ-1" value="&lt;font style=&quot;font-size: 18px;&quot;&gt;&lt;b&gt;API Gateway (GraphQL)&lt;/b&gt;&lt;/font&gt;" style="rounded=1;whiteSpace=wrap;html=1;" vertex="1" parent="1">
           <mxGeometry x="190" y="200" width="580" height="80" as="geometry" />
         </mxCell>
-        <mxCell id="_Vlkt0tSZf_k8hfW9mjZ-2" value="&lt;b&gt;&lt;u&gt;&lt;font style=&quot;font-size: 18px;&quot;&gt;Web App UI&amp;nbsp;&lt;/font&gt;&lt;/u&gt;&lt;/b&gt;&lt;div&gt;&lt;b&gt;&lt;u&gt;&lt;font size=&quot;3&quot;&gt;(E5 Third Party =&amp;gt; Collab Design)&lt;/font&gt;&lt;/u&gt;&lt;/b&gt;&lt;/div&gt;" style="rounded=1;whiteSpace=wrap;html=1;" vertex="1" parent="1">
+        <mxCell id="_Vlkt0tSZf_k8hfW9mjZ-2" value="&lt;b&gt;&lt;font style=&quot;font-size: 18px;&quot;&gt;Web App UI&amp;nbsp;&lt;/font&gt;&lt;/b&gt;&lt;div&gt;&lt;b&gt;&lt;font style=&quot;&quot; size=&quot;3&quot;&gt;(E5 Third Party =&amp;gt; Collab Design)&lt;/font&gt;&lt;/b&gt;&lt;/div&gt;" style="rounded=1;whiteSpace=wrap;html=1;" vertex="1" parent="1">
           <mxGeometry x="369" y="10" width="220" height="100" as="geometry" />
         </mxCell>
         <mxCell id="_Vlkt0tSZf_k8hfW9mjZ-3" value="" style="shape=hexagon;perimeter=hexagonPerimeter2;whiteSpace=wrap;html=1;fixedSize=1;" vertex="1" parent="1">

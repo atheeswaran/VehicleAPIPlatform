@@ -6,6 +6,20 @@ const kafka = new Kafka({
 });
 
 const consumer = kafka.consumer({ groupId: 'fleet-optimization-group' });
+let isConsumerRunning = false;
+let telematicsDataCache = null; // Cache to store telematics data
+
+// Function to stop and disconnect the Kafka consumer
+const stopConsumer = async () => {
+  if (isConsumerRunning) {
+    try {
+      await consumer.disconnect();
+      console.log('Consumer stopped.');
+    } catch (error) {
+      console.error('Error stopping consumer:', error);
+    }
+  }
+};
 
 const adjustRoute = (vehicleId, telematicsData) => {
   let message = ''; // Initialize an empty message
@@ -36,28 +50,31 @@ const adjustRoute = (vehicleId, telematicsData) => {
   return message; // Return the message
 };
 
-const consumeTelematicsData = (vehicleId) => {
-  return new Promise((resolve, reject) => {
+const consumeTelematicsData = async (vehicleId) => {
+  if (!isConsumerRunning) {
     try {
-      consumer.connect().then(() => {
-        consumer.subscribe({ topic: 'telematics-data-topic', fromBeginning: true }).then(() => {
-          consumer.run({
-            eachMessage: async ({ message }) => {
-              const telematicsData = JSON.parse(message.value.toString());
-              console.log('Processing Telematics Data:', telematicsData);
-              // Adjust route based on telematics data and get the message
-              const msg = adjustRoute(vehicleId, telematicsData); 
-              console.log('msg:', msg);  
-              resolve(msg);
-            },
-          });
-        });
+      await consumer.connect();
+      await consumer.subscribe({ topic: 'telematics-data-topic', fromBeginning: true });
+      await consumer.run({
+        eachMessage: async ({ message }) => {
+          const telematicsData = JSON.parse(message.value.toString());
+          console.log('Processing Telematics Data:', telematicsData);
+          telematicsDataCache = telematicsData; // Cache the telematics data
+          isConsumerRunning = true;
+        },
       });
     } catch (error) {
       console.error('Error consuming telematics data:', error);
-      reject(error);
+      throw error;
     }
-  });
+  }
+};
+
+const getTelematicsData = () => {
+  if (telematicsDataCache.length === 0) {
+    throw new Error('Telematics data is not available. Please wait for the first telemetry data to be received.');
+  }
+  return telematicsDataCache;
 };
 
 const fleetOptimizationResolvers = {
@@ -65,7 +82,9 @@ const fleetOptimizationResolvers = {
     adjustRoute: async (_, { vehicleId }) => {
       try {
         console.log(`Adjusting Route for Vehicle ${vehicleId}`);
-        message = await consumeTelematicsData(vehicleId);
+        await consumeTelematicsData(vehicleId);
+        const telematicsData = getTelematicsData();
+        const message = adjustRoute(vehicleId, telematicsData);
         console.log('message:', message);  
         return message; // Return the message
       } catch (error) {
@@ -75,4 +94,5 @@ const fleetOptimizationResolvers = {
     },
   },
 };
+
 module.exports = fleetOptimizationResolvers;

@@ -7,19 +7,21 @@ import { SubscriptionServiceComponent } from './components/subscription-service/
 import { VehicleSpecsComponent } from './components/vehicle-specs/vehicle-specs.component';
 import { VehicleInventoryComponent } from './components/vehicle-inventory/vehicle-inventory.component';
 import { OnlineFinancingComponent } from './components/online-financing/online-financing.component';
-import { CollabDesignComponent } from './components/collab-design/collab-design.component';
+import { CollaborationComponent } from './components/collab-design/collab-design.component';
+import { LoginComponent } from './components/authentication/authentication.component';
 
 const routes: Routes = [
-  { path: '', component: AppComponent },
+  { path: 'login', component: LoginComponent },
+  { path: 'home', component: AppComponent },
   { path: 'FleetOptimization', component: FleetOptimizationComponent },
-  //{ path: '**', redirectTo: '/FleetOptimization', pathMatch: 'full' } // Redirect any other path to FleetOptimization
+  { path: '', redirectTo: '/login', pathMatch: 'full' }, // Default route redirects to login
 
    { path: 'SafetyAlerts', component: SafetyAlertsComponent },
    { path: 'SubscriptionService', component: SubscriptionServiceComponent },
    { path: 'VehicleSpecs', component: VehicleSpecsComponent },
    { path: 'VehicleInventory', component: VehicleInventoryComponent },
    { path: 'OnlineFinancing', component: OnlineFinancingComponent },
-   { path: 'CollabDesign', component: CollabDesignComponent },
+   { path: 'CollabDesign', component: CollaborationComponent },
   // Add more routes as needed
 ];
 

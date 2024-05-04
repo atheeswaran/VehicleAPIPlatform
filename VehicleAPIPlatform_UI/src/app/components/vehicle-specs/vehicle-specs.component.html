@@ -1,1 +1,28 @@
-<p>vehicle-specs works!</p>
+<div>
+    <h2>E3 Customer Portal => Vehicle Specs</h2>
+    <div *ngIf="vehicleSpecs">
+        <table>
+            <thead>
+                <tr>
+                    <th>Vehicle ID</th>
+                    <th>Model</th>
+                    <th>Make</th>
+                    <th>Year</th>
+                    <th>VIN</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr *ngFor="let vehicleSpec of vehicleSpecs.data.getAllVehicleSpecs">
+                    <td>{{ vehicleSpec.id }}</td>
+                    <td>{{ vehicleSpec.model }}</td>
+                    <td>{{ vehicleSpec.make }}</td>
+                    <td>{{ vehicleSpec.year }}</td>
+                    <td>{{ vehicleSpec.VIN }}</td>
+                </tr>
+            </tbody>
+        </table>
+    </div>
+    <div *ngIf="!vehicleSpecs">
+        <p>Loading vehicle specifications...</p>
+    </div>
+</div>

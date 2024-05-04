@@ -1,24 +1,37 @@
-// paymentProcessingServiceSchema.js
+const { gql } = require('apollo-server');
 
-const { gql } = require('apollo-server-express');
+const typeDefs = gql`
+  type Payment {
+    fleetid: ID!
+    amount: Float!
+    currency: String!
+    status: PaymentStatus!
+    createdAt: String!
+  }
 
-const PaymentProcessingServiceSchema = gql`
-  type Transaction {
-    id: ID!
-    userId: ID!
-    vehicleId: ID!
-    paymentAmount: Float!
-    paymentStatus: String!
-    # Add more fields as needed
+  type Subscription {
+    fleetid: ID!
+    startDate: String!
+    endDate: String!
+    price: Float!
+    currency: String!
+    status: String!
+  }
+
+  enum PaymentStatus {
+    PENDING
+    SUCCESS
+    FAILED
   }
 
   type Query {
-    getTransaction(id: ID!): Transaction
+    getPayment(fleetid: ID!): Payment
+    getAvailableSubscriptions: [Subscription!]!
   }
 
   type Mutation {
-    processPayment(userId: ID!, vehicleId: ID!, paymentAmount: Float!): Transaction
+    makePayment(amount: Float, currency: String): String
   }
 `;
 
-module.exports = PaymentProcessingServiceSchema;
+module.exports = typeDefs;

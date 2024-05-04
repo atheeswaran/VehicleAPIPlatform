@@ -8,6 +8,7 @@ import { Router } from '@angular/router';
 })
 export class AppComponent {
   title = 'VehicleAPIPlatform';
+
   constructor(private router: Router) {}
 
   isFleetOptimizationRoute(): boolean {
@@ -15,6 +16,8 @@ export class AppComponent {
   }
 
     isHomePage(): boolean {
-      return this.router.url === '/';
+      return this.router.url === '/home';
   }
+
+
 }

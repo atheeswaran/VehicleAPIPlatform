@@ -10,12 +10,12 @@ import { Subscription } from 'rxjs';
   styleUrls: ['./safety-alerts.component.css']
 })
 export class SafetyAlertsComponent implements OnInit {
-  telematicsData: any;
+  telematicsData: any = { data: { getAllTelematics: [] } };
   subscription: Subscription | undefined;
 
   constructor(/*private apollo  : Apollo,*/private fleetOptimizationService: FleetOptimizationService,
    private safetyAlertsService: SafetyAlertsService) {}
-   telematicsAnalyticsData: any;
+
    safetyAlertsResponse: { [key: string]: string  } = {};
   // ngOnInit(): void {
   //   this.subscription = this.apollo.subscribe({
@@ -63,8 +63,8 @@ export class SafetyAlertsComponent implements OnInit {
     this.safetyAlertsService.safetyAlerts(vehicleId).subscribe(
       response => {
         console.log('Safety Alerts successful:', response);
-        //this.safetyAlertsResponse[vehicleId] = response.data.safetyAlerts;
-        this.safetyAlertsResponse[vehicleId] = 'Safety alert!!!: High speed detected for fleet with ID: 2'
+        this.safetyAlertsResponse[vehicleId] = response.data.safetyAlerts;
+        //this.safetyAlertsResponse[vehicleId] = 'Safety alert!!!: High speed detected for fleet with ID: 2'
       },
       error => {
         console.error('Failed to raise safety alerts:', error);

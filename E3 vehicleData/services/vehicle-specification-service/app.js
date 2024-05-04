@@ -1,6 +1,6 @@
 // index.js
 
-const { ApolloServer, gql } = require('apollo-server');
+
 const subscriptionServiceResolvers = require('./graphql/vehicleSpecResolvers');
 const subscriptionServiceSchema = require('./graphql/vehicleSpecSchema');
 const express = require('express');
@@ -30,7 +30,7 @@ async function startServer() {
     console.log('Apollo Server middleware applied');
 
     // Start the server
-    const PORT = 3002;
+    const PORT = 3006;
     app.listen(PORT, () => {
       console.log(`Server running at http://localhost:${PORT}${server.graphqlPath}`);
     });

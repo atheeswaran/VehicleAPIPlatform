@@ -14,10 +14,7 @@ const VehicleSpecificationSchema = gql`
 
   type Query {
     getVehicleSpecification(id: ID!): VehicleSpecification
-  }
-
-  type Mutation {
-    createVehicleSpecification(model: String!, make: String!, year: Int!, VIN: String!): VehicleSpecification
+    getAllVehicleSpecs: [VehicleSpecification!]!
   }
 `;
 

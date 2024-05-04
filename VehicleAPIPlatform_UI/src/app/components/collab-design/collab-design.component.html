@@ -1,1 +1,29 @@
-<p>collab-design works!</p>
+<div>
+  <h2>E5 3rd Party => Collab Design</h2>
+  <h3>Events already triggered to retrieve Available Stakeholders and Collab Designs </h3>
+  <button (click)="processData()">Retrieve (Event Mesh Orchestration)</button>
+
+  <div *ngIf="responses.length >= 2">
+    <div *ngFor="let response of responses; let i = index">
+      <ng-container *ngIf="isStringResponse(response); else objectResponse">
+        <h3 *ngIf="i === 0">Available Collab Designs:</h3>
+        <h3 *ngIf="i === 1">Available Stakeholders :</h3>
+        {{ response }}
+      </ng-container>
+      <ng-template #objectResponse>
+        <h3 *ngIf="i === 0">Available Collab Designs :</h3>
+        <h3 *ngIf="i === 1">Available Stakeholders:</h3>
+        <ul>
+          <li *ngFor="let item of response">
+            <div *ngFor="let keyValuePair of item | keyvalue">
+              <strong>{{ keyValuePair.key }}:</strong> {{ keyValuePair.value }}
+            </div>
+          </li>
+        </ul>
+      </ng-template>
+    </div>
+    <button *ngIf="responses.length >= 2" (click)="updateCollabDesigns()">Update Collab Designs</button>
+    <!-- Display message after button click -->
+  <p *ngIf="updateClicked" class="message">{{message}}</p>
+  </div>
+</div>

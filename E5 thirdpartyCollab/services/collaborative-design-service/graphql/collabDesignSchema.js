@@ -4,7 +4,8 @@ const { gql } = require('apollo-server-express');
 
 const CollaborativeDesignServiceSchema = gql`
   type Design {
-    id: ID!
+    collabDesignId: ID!
+    stakeholderId: ID!
     manufacturerId: ID!
     bodyBuilderId: ID!
     designSpecifications: [String]!
@@ -12,11 +13,12 @@ const CollaborativeDesignServiceSchema = gql`
   }
 
   type Query {
-    getDesign(id: ID!): Design
+    getDesign(collabDesignId: ID!): Design
+    getAllDesigns: [Design]
   }
 
   type Mutation {
-    createDesign(manufacturerId: ID!, bodyBuilderId: ID!, designSpecifications: [String]!): Design
+    updateDesign(manufacturerId: ID!, bodyBuilderId: ID!, designSpecifications: [String]!): Design
   }
 `;
 

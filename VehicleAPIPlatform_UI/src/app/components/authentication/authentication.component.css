@@ -1,0 +1,37 @@
+/* Your CSS styles here */
+
+form {
+    margin: auto;
+    width: 300px;
+    padding: 20px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+  }
+  
+  input[type="text"],
+  input[type="password"],
+  button {
+    display: block;
+    margin: 10px auto;
+    width: 100%;
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+  }
+  
+  button {
+    background-color: #007bff;
+    color: white;
+    font-weight: bold;
+    cursor: pointer;
+  }
+  
+  button:hover {
+    background-color: #0056b3;
+  }
+  
+
+  .error-message {
+  color: rgb(255, 98, 0);
+  font-style: italic; /* Set the font style to italic */
+}

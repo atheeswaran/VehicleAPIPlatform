@@ -1,0 +1,61 @@
+/* Style for the container div */
+.container {
+    padding: 20px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    margin-bottom: 20px;
+  }
+  
+  /* Style for the headers */
+  h2 {
+    font-size: 24px;
+    margin-bottom: 10px;
+    color: #e1bee7;
+  }
+  
+  h3 {
+    font-size: 18px;
+    margin-bottom: 10px;
+    background-color: #e1bee7;
+  }
+  
+  /* Style for the button */
+  button {
+    padding: 10px 20px;
+    background-color: #e1bee7;
+    color: #211e1e;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+  }
+  
+  button:hover {
+    background-color: #e1bee7;
+  }
+  
+  /* Style for the list */
+  ul {
+    list-style-type: none;
+    padding: 0;
+  }
+  
+  /* Style for list items */
+  li {
+    margin-bottom: 5px;
+  }
+  
+  /* Style for key-value pairs */
+  .key {
+    font-weight: bold;
+  }
+  
+  .value {
+    margin-left: 5px;
+  }
+  
+
+  .message {
+    color: rgb(24, 39, 24);
+    background-color: #e1bee7;
+    font-style: italic; /* Set the font style to italic */
+  }

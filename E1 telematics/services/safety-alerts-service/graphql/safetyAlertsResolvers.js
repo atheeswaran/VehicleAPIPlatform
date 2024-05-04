@@ -6,32 +6,46 @@ const kafka = new Kafka({
 });
 
 const consumer = kafka.consumer({ groupId: 'safety-alerts-group' });
+let isConsumerRunning = false;
+let telematicsDataCache = null; // Cache to store received telematics data
 
-// const { PubSub } = require('graphql-subscriptions');
-// const pubsub = new PubSub();
-
-const consumeTelematicsData = (vehicleId) => {
-
+// Function to stop and disconnect the Kafka consumer
+const stopConsumer = async () => {
+  if (isConsumerRunning) {
     try {
-      consumer.connect().then(() => {
-        consumer.subscribe({ topic: 'telematics-data-topic', fromBeginning: true }).then(() => {
-          consumer.run({
-            eachMessage: async ({ message }) => {
-              const telematicsData = JSON.parse(message.value.toString());
-              console.log('Processing Telematics Data:', telematicsData); 
-              return telematicsData;
+      await consumer.disconnect();
+      console.log('Consumer stopped.');
+    } catch (error) {
+      console.error('Error stopping consumer:', error);
+    }
+  }
+};
 
-
-            },
-          });
-        });
+const consumeTelematicsData = async () => {
+  if (!isConsumerRunning) {
+    try {
+      await consumer.connect();
+      await consumer.subscribe({ topic: 'telematics-data-topic', fromBeginning: true });
+      await consumer.run({
+        eachMessage: async ({ message }) => {
+          const telematicsData = JSON.parse(message.value.toString());
+          console.log('Processing Telematics Data:', telematicsData);
+          telematicsDataCache = telematicsData; // Cache the telematics data
+          isConsumerRunning = true;
+        },
       });
     } catch (error) {
       console.error('Error consuming telematics data:', error);
-      // Reject the promise with the error
-      reject(error);
+      throw error;
     }
+  }
+};
 
+const getTelematicsData = () => {
+  if (!telematicsDataCache) {
+    throw new Error('Telematics data is not available. Please wait for the first telemetry data to be received.');
+  }
+  return telematicsDataCache;
 };
 
 const resolvers = {
@@ -43,7 +57,9 @@ const resolvers = {
   Mutation: {
     safetyAlerts: async (_, { vehicleId }) => {
       try {
-        const vehicleData = await consumeTelematicsData();
+        console.log(`Safety alerts requested for Vehicle ${vehicleId}`);
+        await consumeTelematicsData(); // Start consuming telematics data
+        const vehicleData = getTelematicsData();
         const vehicleTelematics = vehicleData.find(data => data.telematicsId === vehicleId);
  
         if (vehicleTelematics.averageSpeed > 100) {
@@ -53,7 +69,7 @@ const resolvers = {
         }
       } catch (error) {
         console.error('Error processing safety alerts:', error);
-        return `Error processing safety alerts for fleet with ID: ${vehicleId}`;
+        throw error;
       }
     }
   },
@@ -65,3 +81,6 @@ const resolvers = {
 };
 
 module.exports = resolvers;
+
+// Call consumeTelematicsData to start consuming telematics data
+consumeTelematicsData();

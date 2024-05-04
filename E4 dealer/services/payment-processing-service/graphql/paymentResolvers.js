@@ -1,49 +1,44 @@
-// paymentProcessingServiceResolvers.js
+// const { Payment } = require('./models/Payment');
 
-const { MongoClient } = require('mongodb');
 
-// Initialize the MongoDB client
-const client = new MongoClient('mongodb+srv://2022mt93200:Wp06071983@cluster0.w5y9tcc.mongodb.net/?retryWrites=true&w=majority&appName=Cluster0');
+// Dummy data for available subscriptions
 
-const PaymentProcessingServiceResolvers = {
+const subscriptions = [
+  { fleetid: '133',  startDate: '2024-03-01', endDate: '2024-04-01', price: 9.99, currency: 'USD', status: 'available' },
+  { fleetid: '202',  startDate: '2024-04-01', endDate: '2024-08-01', price: 19.99, currency: 'USD', status: 'Subscribed' },
+  { fleetid: '343',  startDate: '2024-05-01', endDate: '2024-07-01', price: 29.99, currency: 'USD', status: 'available' },
+];
+
+const getAvailableSubscriptions = () => {
+    return subscriptions;
+};
+
+const resolvers = {
   Query: {
-    getTransaction: async (_, { id }) => {
-      try {
-        await client.connect(); // Connect to MongoDB
-        const db = client.db('dealer');
-        const transactionsCollection = db.collection('transactions');
-
-        // Fetch transaction details by ID
-        return await transactionsCollection.findOne({ _id: id });
-      } catch (error) {
-        console.error('Error in getTransaction resolver:', error);
-        throw error;
-      }
+    getPayment: async (_, { fleetid }) => {
+      // try {
+      //   const payment = await Payment.findById(id);
+      //   return payment;
+      // } catch (error) {
+      //   throw new Error(`Failed to fetch payment with ID ${id}`);
+      // }
     },
+    getAvailableSubscriptions,
   },
   Mutation: {
-    processPayment: async (_, args) => {
+    makePayment: async (_, { amount, currency }) => {
       try {
-        await client.connect(); // Connect to MongoDB
-        const db = client.db('dealer');
-        const transactionsCollection = db.collection('transactions');
+        // Logic to make the payment
+        // For example, call a payment gateway API
 
-        // Process payment and create a new transaction record
-        const result = await transactionsCollection.insertOne({
-          userId: args.userId,
-          vehicleId: args.vehicleId,
-          paymentAmount: args.paymentAmount,
-          paymentStatus: 'Processed', // You can customize the payment status logic
-        });
-
-        // Return the newly created transaction
-        return { id: result.insertedId, ...args, paymentStatus: 'Processed' };
+        // Return a success message
+        return 'Payment has been made successfully for the selected Subscription!';
       } catch (error) {
-        console.error('Error in processPayment resolver:', error);
-        throw error;
+        console.error('Error making payment:', error);
+        throw new Error('Failed to make payment');
       }
     },
   },
 };
 
-module.exports = PaymentProcessingServiceResolvers;
+module.exports = resolvers;

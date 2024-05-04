@@ -1,26 +1,22 @@
-// vehicleInventoryServiceSchema.js
+// vehicleInventorySchema.js
 
 const { gql } = require('apollo-server-express');
 
-const VehicleInventoryServiceSchema = gql`
+const VehicleInventorySchema = gql`
   type Vehicle {
     id: ID!
     model: String!
     make: String!
     year: Int!
-    vin: String!
+    VIN: String!
     quantity: Int!
     pricing: Float!
-    # Add more fields as needed
   }
 
   type Query {
-    getVehicle(id: ID!): Vehicle
-  }
-
-  type Mutation {
-    createVehicle(model: String!, make: String!, year: Int!, vin: String!, quantity: Int!, pricing: Float!): Vehicle
+    getAllVehicles: [Vehicle!]!
+    getVehicleById(id: ID!): Vehicle
   }
 `;
 
-module.exports = VehicleInventoryServiceSchema;
+module.exports = VehicleInventorySchema;

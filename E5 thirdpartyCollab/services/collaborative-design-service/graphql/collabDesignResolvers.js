@@ -1,49 +1,47 @@
-// collaborativeDesignServiceResolvers.js
+// collaborativeDesignResolvers.js
 
-const { MongoClient } = require('mongodb');
+// Sample design data
+const designs = [
+  {
+    collabDesignId: '1',
+    stakeholderId: '3',
+    designSpecifications: ['Specification 1', 'Specification 2']
+  },
+  {
+    collabDesignId: '2',
+    stakeholderId: '2',   
+    designSpecifications: ['Specification 3', 'Specification 4']
+  },
+  // Add more sample data as needed
+];
 
-// Initialize the MongoDB client
-const client = new MongoClient('mongodb+srv://2022mt93200:Wp06071983@cluster0.w5y9tcc.mongodb.net/?retryWrites=true&w=majority&appName=Cluster0');
-
-const CollaborativeDesignServiceResolvers = {
+const resolvers = {
   Query: {
-    getDesign: async (_, { id }) => {
-      try {
-        await client.connect(); // Connect to MongoDB
-        const db = client.db('thirdparty');
-        const designsCollection = db.collection('designs');
-
-        // Fetch design details by ID
-        return await designsCollection.findOne({ _id: id });
-      } catch (error) {
-        console.error('Error in getDesign resolver:', error);
-        throw error;
-      }
+    getDesign: (parent, { id }, context, info) => {
+      // Find design by ID
+      return designs.find(design => design.id === id);
     },
+
   },
   Mutation: {
-    createDesign: async (_, args) => {
-      try {
-        await client.connect(); // Connect to MongoDB
-        const db = client.db('thirdparty');
-        const designsCollection = db.collection('designs');
-
-        // Create a new design record
-        const result = await designsCollection.insertOne({
-          manufacturerId: args.manufacturerId,
-          bodyBuilderId: args.bodyBuilderId,
-          designSpecifications: args.designSpecifications,
-          // Add more fields as needed
-        });
-
-        // Return the newly created design
-        return { id: result.insertedId, ...args };
-      } catch (error) {
-        console.error('Error in createDesign resolver:', error);
-        throw error;
-      }
-    },
-  },
+    updateDesign: (parent, { manufacturerId, bodyBuilderId, designSpecifications }, context, info) => {
+      // Implement logic to update design and return the updated design
+      // For simplicity, we'll just return the input parameters
+      const updatedDesign = {
+        id: '3', // Assuming a new ID for the updated design
+        manufacturerId,
+        bodyBuilderId,
+        designSpecifications
+      };
+      designs.push(updatedDesign); // Assuming we add the updated design to the existing designs array
+      return updatedDesign;
+    }
+  }
 };
 
-module.exports = CollaborativeDesignServiceResolvers;
+
+const getAllDesigns = () => {
+  // Return all designs
+  return designs;
+}
+module.exports = {getAllDesigns};

@@ -1,1 +1,33 @@
-<p>online-financing works!</p>
+<div class="container">
+    <h2>E4 Dealer Portal => Online Financing</h2>
+    <div>
+        <h3>Available Subscriptions</h3>
+        <table>
+            <thead>
+                <tr>
+                    <th>FleetID</th>
+                    <th>Start Date</th>
+                    <th>End Date</th>
+                    <th>Price</th>
+                    <th>Status</th>
+                    <th>Action</th>
+                </tr>
+            </thead>
+            <tbody *ngIf="availableSubscriptions">
+                <tr *ngFor="let subscription of availableSubscriptions.data.getAvailableSubscriptions">
+                    <td>{{ subscription.fleetid }}</td>
+                    <td>{{ subscription.startDate }}</td>
+                    <td>{{ subscription.endDate }}</td>
+                    <td>{{ subscription.price }} {{ subscription.currency }}</td>
+                    <td>{{ subscription.status }}</td>
+                    <td>
+                        <button class="pay-button" (click)="makePayment(subscription.fleetid)">Pay!</button>
+                        <div *ngIf="message[subscription.fleetid]" class="response-message">
+                          {{ message[subscription.fleetid] }}
+                        </div>
+                      </td>
+                </tr>
+            </tbody>
+        </table>
+    </div>      
+</div>

@@ -7,7 +7,7 @@ import { FleetOptimizationService, OptimizeRouteService  } from '../../services/
   styleUrls: ['./fleet-optimization.component.css']
 })
 export class FleetOptimizationComponent {
-  telematicsAnalyticsData: any; // Variable to store TelematicsAnalytics data
+  telematicsAnalyticsData: any = { data: { getAllTelematics: [] } };
   optimizationInProgress: boolean = false; // Flag to track optimization process
   adjustRouteResponse: { [key: string]: string  } = {}; // Define adjustRouteResponse as an object with string keys and values containing an object with a message property
 

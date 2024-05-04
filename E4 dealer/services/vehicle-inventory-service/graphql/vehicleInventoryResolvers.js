@@ -1,44 +1,63 @@
-// vehicleInventoryServiceResolvers.js
+// vehicleInventoryResolvers.js
 
-const { MongoClient } = require('mongodb');
+const vehicles = [
+  {
+    id: '1',
+    model: 'Accord',
+    make: 'Honda',
+    year: 2022,
+    VIN: '12345678901234567',
+    quantity: 5,
+    pricing: 25000.00
+  },
+  {
+    id: '2',
+    model: 'Camry',
+    make: 'Toyota',
+    year: 2021,
+    VIN: '98765432109876543',
+    quantity: 3,
+    pricing: 27000.00
+  },
+  // Add more vehicles as needed
+];
 
-// Initialize the MongoDB client
-const client = new MongoClient('mongodb+srv://2022mt93200:Wp06071983@cluster0.w5y9tcc.mongodb.net/?retryWrites=true&w=majority&appName=Cluster0');
-
-const VehicleInventoryServiceResolvers = {
+const resolvers = {
   Query: {
-    getVehicle: async (_, { id }) => {
-      try {
-        await client.connect(); // Connect to MongoDB
-        const db = client.db('dealer');
-        const vehiclesCollection = db.collection('inventory');
-
-        // Fetch vehicle details by ID
-        return await vehiclesCollection.findOne({ _id: id });
-      } catch (error) {
-        console.error('Error in getVehicle resolver:', error);
-        throw error;
-      }
+    getAllVehicles: () => {
+      return vehicles;
     },
-  },
-  Mutation: {
-    createVehicle: async (_, args) => {
-      try {
-        await client.connect(); // Connect to MongoDB
-        const db = client.db('dealer');
-        const vehiclesCollection = db.collection('inventory');
-
-        // Insert new vehicle
-        const result = await vehiclesCollection.insertOne(args);
-
-        // Return the newly created vehicle
-        return { id: result.insertedId, ...args };
-      } catch (error) {
-        console.error('Error in createVehicle resolver:', error);
-        throw error;
-      }
-    },
-  },
+    getVehicleById: (_, { id }) => {
+      return vehicles.find(vehicle => vehicle.id === id);
+    }
+  }
 };
 
-module.exports = VehicleInventoryServiceResolvers;
+module.exports = resolvers;
+
+
+/*
+const { DataSource } = require('apollo-datasource-rest');
+// Define a custom data source to fetch data from Azure API Management
+class VehicleInventoryAPI extends DataSource {
+
+  // Define a method to fetch all vehicle inventories
+  async getAllVehicleInventories() {
+    // Make a GET request to the APIM endpoint
+    const response = await this.get('/allVehicleInventories', undefined, {  });
+    return response; // Return the response data
+  }
+}
+
+const resolvers = {
+  Query: {
+    getAllVehicleInventories: async (parent, args, { dataSources }) => {
+      // Call the data source method to fetch all vehicle inventories
+      return dataSources.vehicleInventoryAPI.getAllVehicleInventories();
+    },
+
+    getVehicleById: (_, { id }) => {
+      return vehicles.find(vehicle => vehicle.id === id);
+    }
+  }
+};*/

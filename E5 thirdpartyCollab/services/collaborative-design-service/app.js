@@ -30,7 +30,7 @@ async function startServer() {
     console.log('Apollo Server middleware applied');
 
     // Start the server
-    const PORT = 3002;
+    const PORT = 3011;
     app.listen(PORT, () => {
       console.log(`Server running at http://localhost:${PORT}${server.graphqlPath}`);
     });

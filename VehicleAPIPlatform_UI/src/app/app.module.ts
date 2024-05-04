@@ -13,8 +13,9 @@ import { SubscriptionServiceComponent } from './components/subscription-service/
 import { VehicleSpecsComponent } from './components/vehicle-specs/vehicle-specs.component';
 import { VehicleInventoryComponent } from './components/vehicle-inventory/vehicle-inventory.component';
 import { OnlineFinancingComponent } from './components/online-financing/online-financing.component';
-import { CollabDesignComponent } from './components/collab-design/collab-design.component';
+import { CollaborationComponent } from './components/collab-design/collab-design.component';
 import { FleetOptimizationService, OptimizeRouteService } from './services/fleet-optimization.service';
+import { LoginComponent } from './components/authentication/authentication.component';
 
 @NgModule({
   declarations: [
@@ -26,7 +27,8 @@ import { FleetOptimizationService, OptimizeRouteService } from './services/fleet
     VehicleSpecsComponent,
     VehicleInventoryComponent,
     OnlineFinancingComponent,
-    CollabDesignComponent
+    CollaborationComponent,
+    LoginComponent
   ],
   imports: [
     BrowserModule,
